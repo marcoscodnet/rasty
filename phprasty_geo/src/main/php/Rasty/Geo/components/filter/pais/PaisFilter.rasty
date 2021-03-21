@@ -1,0 +1,15 @@
+<rasty specificationClass="Rasty\Geo\components\filter\pais\PaisFilter" templateLocation="PaisFilter.htm">
+
+	<component id="nombre" type="InputText">
+		<param name="name" value="str:nombre" />
+		<param name="value" value="criteria.nombre" />
+		<param name="placeholder" value="msg:pais.nombre" />
+	</component>
+
+	<component id="codigo" type="InputText">
+		<param name="name" value="str:codigo" />
+		<param name="value" value="criteria.codigo" />
+		<param name="placeholder" value="msg:pais.codigo" />
+	</component>
+
+</rasty>

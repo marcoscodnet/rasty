@@ -1,0 +1,35 @@
+<rasty specificationClass="Rasty\Geo\components\form\pais\PaisForm" templateLocation="PaisForm.htm">
+
+	<param name="error" value="get:error" />
+
+	<component id="backSuccess" type="InputHidden">
+		<param name="inputId" value="str:backToOnSuccess" />
+		<param name="name" value="str:backToOnSuccess" />
+		<param name="value" value="backToOnSuccess" />
+	</component>
+
+	<component id="oid" type="InputHidden">
+		<param name="inputId" value="str:oid" />
+		<param name="name" value="str:oid" />
+		<param name="value" value="pais.oid" />
+	</component>
+	
+	<component id="nombre" type="InputText">
+		<param name="inputId" value="str:nombre" />
+		<param name="name" value="str:nombre" />
+		<param name="value" value="pais.nombre" />
+		<param name="requiredMessage" value="msg:pais.nombre.requerido" />
+		<param name="placeholder" value="msg:pais.nombre" />
+		<param name="styleCss" value="str:uppercase" />
+	</component>
+	
+	<component id="codigo" type="InputText">
+		<param name="inputId" value="str:codigo" />
+		<param name="name" value="str:codigo" />
+		<param name="value" value="pais.codigo" />
+		<param name="requiredMessage" value="msg:pais.codigo.requerido" />
+		<param name="placeholder" value="msg:pais.codigo" />
+		<param name="styleCss" value="str:uppercase" />
+	</component>
+	
+</rasty>

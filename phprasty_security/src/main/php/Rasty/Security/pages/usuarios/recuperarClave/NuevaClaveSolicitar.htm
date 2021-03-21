@@ -1,0 +1,53 @@
+<!-- BEGIN: main-->
+<script>
+</script>
+
+<style>
+
+.jfVal, .jValSpacercover {
+    display: none;
+}
+
+.jfVal .content {
+    display: none;
+}
+
+</style>
+
+<div class="logincontainer">
+<!-- a class="logo" target="_blank" href="{link_login}"><img border="0" alt="{login_titulo} - {login_subtitulo}"  title="{login_titulo} - {login_subtitulo}" name="imLogo" id="imLogo" src="{WEB_PATH}/css/images/aliba-logo.jpg" width="300"></a-->
+
+
+
+
+<!-- Login form -->
+<form id="login_form" target="_top" name="login_form" action='{action}'  onsubmit="return validate('login_form');" method='post'>
+    <fieldset>
+    <legend>{legend}</legend>
+
+		<div style="padding-bottom:20px;padding-top:20px;">
+		Indica tu usuario y te enviaremos un e-mail para que puedas recuperar tu clave . <br />
+		</div>
+		
+        <div class="item">
+            <input  placeholder="{lbl_username} *" type="text" size="24" value="" id="input_username" name="username" data-required="yes" data-required-msg="{txt_ingrese_username}"/>
+        </div>
+    	<div class="required-fields">(*) {txt_campos_obligatorios}</div>        
+    </fieldset>
+    <!-- BEGIN: msg_error -->
+	<fieldset class="ui-state-error">
+			{msg}	
+	</fieldset>
+	<!-- END: msg_error -->
+    <fieldset class="tblFooters">
+        <input type="submit" id="input_go" value="{btn_solicitar}">
+   	</fieldset>
+	<div class="login_acciones">
+   		<span><a href="{link_registrarse}">{lbl_registrarse}</a></span>
+   		<span><a href="{link_login}">{lbl_login}</a></span>
+   	</div>
+</form>
+
+</div>
+    		
+<!-- END: main-->

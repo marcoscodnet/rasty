@@ -1,0 +1,18 @@
+<rasty specificationClass="Rasty\Forms\finderpopup\FinderPopup" templateLocation="FinderPopup.htm">
+
+	<param name="onSelectCallback" value="get:onSelectCallback" />
+	<param name="initialText" value="get:initialText" />
+	<param name="popupDivId" value="get:popupDivId" />
+	
+	<!-- para agregar en caso de no encontrar resultados -->
+	<param name="hasAddEntity" value="get:hasAddEntity" />
+	<param name="onClickAddCallback" value="get:onClickAddCallback" />
+	<param name="msgAdd" value="get:msgAdd" />
+	<param name="msgEmptyResult" value="get:msgEmptyResult" />
+	
+	<param name="filterType" value="get:filterType" />
+	<component id="popupFilter" instance="filter" >
+		
+	</component>
+	
+</rasty>

@@ -1,0 +1,42 @@
+<rasty specificationClass="Rasty\Catalogo\components\form\catalogo\CatalogoForm" templateLocation="CatalogoForm.htm">
+
+	<param name="error" value="get:error" />
+
+	<component id="backSuccess" type="InputHidden">
+		<param name="inputId" value="str:backToOnSuccess" />
+		<param name="name" value="str:backToOnSuccess" />
+		<param name="value" value="backToOnSuccess" />
+	</component>
+
+	<component id="oid" type="InputHidden">
+		<param name="inputId" value="str:oid" />
+		<param name="name" value="str:oid" />
+		<param name="value" value="catalogo.oid" />
+	</component>
+	
+	<component id="nombre" type="InputText">
+		<param name="inputId" value="str:nombre" />
+		<param name="name" value="str:nombre" />
+		<param name="value" value="catalogo.nombre" />
+		<param name="requiredMessage" value="msg:catalogo.nombre.required" />
+		<param name="placeholder" value="msg:catalogo.nombre" />
+		
+	</component>
+	
+	<component id="codigo" type="InputText">
+		<param name="inputId" value="str:codigo" />
+		<param name="name" value="str:codigo" />
+		<param name="value" value="catalogo.codigo" />
+		<param name="requiredMessage" value="msg:catalogo.codigo.required" />
+		<param name="placeholder" value="msg:catalogo.codigo" />
+		<param name="styleCss" value="str:uppercase" />
+	</component>
+	
+	<component id="descripcion" type="InputText">
+		<param name="inputId" value="str:descripcion" />
+		<param name="name" value="str:descripcion" />
+		<param name="value" value="catalogo.descripcion" />
+		<param name="placeholder" value="msg:catalogo.descripcion" />
+	</component>
+	
+</rasty>

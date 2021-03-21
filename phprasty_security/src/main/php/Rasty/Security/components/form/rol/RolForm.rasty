@@ -1,0 +1,33 @@
+<rasty specificationClass="Rasty\Security\components\form\rol\RolForm" templateLocation="RolForm.htm">
+
+	<param name="error" value="get:error" />
+
+	<component id="backSuccess" type="InputHidden">
+		<param name="inputId" value="str:backToOnSuccess" />
+		<param name="name" value="str:backToOnSuccess" />
+		<param name="value" value="backToOnSuccess" />
+	</component>
+
+	<component id="oid" type="InputHidden">
+		<param name="inputId" value="str:oid" />
+		<param name="name" value="str:oid" />
+		<param name="value" value="rol.oid" />
+	</component>
+
+	<component id="name" type="InputText">
+		<param name="inputId" value="str:name" />
+		<param name="name" value="str:name" />
+		<param name="value" value="rol.name" />
+		<param name="requiredMessage" value="msg:rol.name.required" />
+		<param name="placeholder" value="msg:rol.name" />
+		<param name="styleCss" value="str:uppercase" />
+	</component>
+
+	<component id="description" type="InputText">
+		<param name="inputId" value="str:description" />
+		<param name="name" value="str:description" />
+		<param name="value" value="rol.description" />
+		<param name="placeholder" value="msg:rol.description" />
+	</component>
+
+</rasty>

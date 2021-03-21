@@ -1,0 +1,13 @@
+<rasty specificationClass="Rasty\Security\pages\roles\Roles" templateLocation="pages/roles/Roles.htm"> 
+
+	<param name="layoutType" value="str:RastySecurityLayout" />
+
+	<component id="rolesFilter" type="RolFilter">
+		<param name="gridModelClazz" value="modelClazz" />
+		<param name="uicriteriaClazz" value="uicriteriaClazz" />
+		<param name="legend" value="msg:rol.buscar" />
+		<param name="legendAgain" value="msg:rol.buscar.again" />
+		<param name="resultDiv" value="str:searchdiv" />
+	</component>
+	
+</rasty>

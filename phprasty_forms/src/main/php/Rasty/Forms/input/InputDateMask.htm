@@ -1,0 +1,30 @@
+<!-- BEGIN: main -->
+<script>
+	
+    $(function() {
+    	$("#{inputId}").mask("99/99/9999", 
+    	    	{completed:function(){
+					$value = this.val();
+					var dia = $value.substr(0,2) ;
+					var mes = $value.substr(3,2) ;
+					var anio = $value.substr(6,4) ;
+
+					var fecha = dia + "/" + mes  + "/" + anio;
+					if( !validaFechaDDMMAAAA(fecha) )
+						this.val("");
+				}});
+    });
+
+
+</script>
+<input type='text'    
+<!-- BEGIN: property --> {name}="{value}" <!-- END: property -->
+<!-- BEGIN:required -->
+jVal="{valid:function (val) { return required(val,'{requiredMessage}'); }}"
+<!-- END:required -->
+
+/>
+<!-- BEGIN:readOnly -->
+<input type="hidden" name="{name}" value="{value}">
+<!-- END:readOnly -->
+<!-- END: main -->

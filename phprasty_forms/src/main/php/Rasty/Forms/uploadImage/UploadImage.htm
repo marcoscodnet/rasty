@@ -1,0 +1,229 @@
+<!-- BEGIN: main-->
+<script>
+
+function showGeneratedThumbnail{id}( imageName ){
+
+	$("#thumbnailContainer{id}").html();
+	
+	console.log("thumbnail:"+imageName);
+	var img = "<img id=\"thumbnail{id}\" src=\"{uploadWebPath}" + imageName + "?time=" + new Date() + "\">";
+
+	$("#thumbnailName{id}").val(imageName);	
+	
+	$("#thumbnailContainer{id}").html(img);	
+	
+	$("#thumbnailDiv{id}").show();
+
+	if( "{thumbnailSuccessCallback}" ){
+		{thumbnailSuccessCallback}( imageName );
+	} 
+}
+
+function showUploadedImage{id}( imageName ){
+
+	var img = "<img width=\"{imageWidth}\" height=\"{imageHeight}\" id=\"uploadedImage{id}\" src=\"{uploadWebPath}" + imageName + "\">";
+
+	$("#imageName{id}").val(imageName);	
+	
+	$("#uploadedImageContainer{id}").html(img);	
+	
+	$("#uploadedImageDiv{id}").show();
+
+	if( "{uploadSuccessCallback}" ){
+		{uploadSuccessCallback}( imageName );
+	} 
+
+	<!-- BEGIN: generateThumbnail -->
+	$('img#uploadedImage{id}').imgAreaSelect({
+        aspectRatio: '1:1',
+        onSelectEnd: getSizes
+    });
+	<!-- END: generateThumbnail -->
+}
+
+function generateThumbnail{id}(width, height, x_axis, y_axis){
+
+	var uploadPath = encodeURI('{uploadPath}');
+	var imageName = encodeURI( $("#imageName{id}").val() );
+
+	$.ajax({
+		url: '{linkGenerateImageThumbnail}?imageName='+imageName + '&width='+width + '&height='+height + '&x='+x_axis + '&y='+y_axis + '&uploadPath='+uploadPath+ '&maxHeight={thumbHeight}&maxWidth={thumbWidth}',
+	  	type: "GET",
+	  	dataType: "json",
+	  	cache: false,
+		complete:function(){
+			
+		},
+	  	success: function(data){
+
+			if( data["error"] != null ){
+
+				console.log(data["error"]);
+				showMessageError(data["error"], false);
+				
+			}else{
+				console.log(data["info"]);
+				//mostramos la imagen para editar el thumbnail	
+				showGeneratedThumbnail{id}(data["thumbnailName"]);
+				
+			}
+	  	}
+	});
+	
+}
+
+function ajaxFileUpload{id}(){
+
+ 	var res = validate('uploadImage{id}');
+	
+	if( !res ){
+		
+		return;
+	}
+		
+	$("#loading{id}").show();
+
+	$.ajaxFileUpload
+	(
+		{
+			url: '{linkUploadImage}',
+			secureuri:false,
+			fileElementId:'fileToUpload{id}',
+			dataType: 'json',
+			beforeSend:function(){
+				
+			},
+			complete:function(){
+				$("#loading{id}").hide();
+			},				
+			success: function (data, status){
+
+				if( data["error"] != null ){
+
+					console.log(data["error"]);
+					alert(data["error"]);
+					
+				}else{
+
+					//mostramos la imagen para editar el thumbnail	
+					showUploadedImage{id}(data["imageName"]);
+					
+				}
+			},
+			error: function (data, status, e){
+				console.log(data);
+				console.log(status);
+				console.log(e);
+				$("#loading{id}").hide();
+			}
+		}
+	)
+	
+	return false;
+
+}
+
+function getSizes{id}(im,obj){
+	var x_axis = obj.x1;
+	var x2_axis = obj.x2;
+	var y_axis = obj.y1;
+	var y2_axis = obj.y2;
+	var thumb_width = obj.width;
+	var thumb_height = obj.height;
+	if(thumb_width > 0){
+
+		generateThumbnail{id}(thumb_width, thumb_height, x_axis, y_axis);
+	}
+}
+
+$(document).ready(function(){
+
+    
+});
+</script>
+
+<style>
+
+#uploadedImage{id}{
+	cursor:crosshair;
+}
+
+#uploadInputs{id}{
+
+
+
+}
+
+#uploadedImageDiv{id}{
+	max-width: 800px;
+	max-height: 600px;
+	float: left;
+	padding: 20px;
+	overflow: hidden;
+}
+
+
+#uploadedImageDiv{id} h1{
+	color: inherit;
+}
+
+#thumbnailDiv{id}{
+	width: 150px;
+	float: left;
+	padding: 20px;
+	display:none;
+}
+
+</style>
+
+<div>
+	<div id="loading{id}" style="display:none;">{loading}</div>
+	<form id="uploadImage{id}" method="post" enctype="multipart/form-data">
+		
+		<fieldset>
+			<legend>{legend}</legend>
+			
+			
+			<div id="uploadInputs{id}">
+			{lbl_file} 
+			<input  type='file' id="fileToUpload{id}" name='imgFile' style="height:24px;" id='file' size='40' value="" jVal="{valid:function (val) { return required(val,'El archivo es requerido'); }}"/> 
+			
+			<br />
+			<a href="#" onclick="ajaxFileUpload{id}();">
+				<img title="{lbl_upload}" alt="{lbl_upload}" src="{WEB_PATH}css/images/upload.png">
+				{lbl_upload}
+			</a>
+			
+			<input type="hidden" name="imageName" id="imageName{id}" value="" />
+			<input type="hidden" name="thumbnailName" id="thumbnailName{id}" value="" />
+			</div>
+
+			<div id="uploadedImageDiv{id}" style="display:none;">
+		
+				<!-- BEGIN: thumbnail_title -->	
+				<h1>{thumbnail_msg}</h1>
+				<!-- END: thumbnail_title -->
+				
+				<span id="uploadedImageContainer{id}"></span>
+				
+			</div>	
+		
+			<!-- BEGIN: thumbnail -->
+			<div id="thumbnailDiv{id}">
+			
+				<h2>{lbl_thumbnail}</h2>
+			
+				<span id="thumbnailContainer{id}"></span>
+				
+			</div>
+			<!-- END: thumbnail -->
+			
+			<div style="clear: both;"></div>
+			
+		</fieldset>
+	</form>
+	
+	
+	
+</div>
+<!-- END: main-->

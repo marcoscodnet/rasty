@@ -1,0 +1,9 @@
+<rasty-application>
+
+	<!-- declaración de los componentes -->
+	<component name="Menu" location="menu" />
+	<component name="ContextMenu" location="contextMenu" />
+
+	<component name="MenuMetro" location="menu" />
+	
+</rasty-application>

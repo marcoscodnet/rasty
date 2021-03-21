@@ -1,0 +1,10 @@
+<rasty specificationClass="Rasty\Forms\uploadImage\UploadImage" templateLocation="UploadImage.htm">
+
+	<param name="uploadPath" value="get:uploadPath" />
+	<param name="uploadWebPath" value="get:uploadWebPath" />
+	
+	<param name="uploadSuccessCallback" value="get:uploadSuccessCallback" />
+	<param name="thumbnailSuccessCallback" value="get:thumbnailSuccessCallback" />
+	
+	
+</rasty>

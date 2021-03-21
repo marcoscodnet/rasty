@@ -1,0 +1,14 @@
+<rasty specificationClass="Rasty\Security\pages\roles\agregar\RolAgregar" templateLocation="pages/roles/agregar/RolAgregar.htm"> 
+ 																	
+	<param name="layoutType" value="str:RastySecurityLayout" />
+
+	<component id="rolForm" type="RolForm">
+		<param name="legend" value="msg:rol.agregar.legend" />
+		<param name="backToOnSuccess" value="get:backTo" />
+		<param name="backToOnCancel" value="get:backTo" />
+		<param name="action" value="linkActionAgregarRol" />
+		<param name="method" value="str:post" />
+		<param name="rol" value="rol" />
+	</component>
+	
+</rasty>

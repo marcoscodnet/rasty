@@ -1,0 +1,26 @@
+<rasty specificationClass="Rasty\Geo\components\filter\localidad\LocalidadFilter" templateLocation="LocalidadFilter.htm">
+
+	<param name="provinciaOid" value="get:provinciaOid" />
+
+	<component id="nombre" type="InputText">
+		<param name="name" value="str:nombre" />
+		<param name="value" value="criteria.nombre" />
+		<param name="placeholder" value="msg:localidad.nombre" />
+	</component>
+
+	<component id="codigoPostal" type="InputText">
+		<param name="name" value="str:codigoPostal" />
+		<param name="value" value="criteria.codigoPostal" />
+		<param name="placeholder" value="msg:localidad.codigoPostal" />
+	</component>
+	
+	<component id="provincia" type="InputFindEntity">
+		<param name="inputId" value="str:provincia" />
+		<param name="name" value="str:provincia" />
+		<param name="value" value="criteria.provincia" />
+		<param name="placeholder" value="msg:localidad.provincia" />
+		<param name="finder" value="provinciaFinderClazz" />
+		<param name="onSelectCallback" value="str:provinciachange" />
+	</component>
+
+</rasty>

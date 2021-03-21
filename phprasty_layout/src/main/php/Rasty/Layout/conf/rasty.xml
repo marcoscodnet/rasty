@@ -1,0 +1,12 @@
+<rasty-application>
+
+	<!-- declaración de los componentes -->
+	<component name="Header" location="header" />
+	<component name="Footer" location="footer" />
+	
+	<!-- layouts -->
+	<component name="Rasty\Layout" location="layout" />
+	<component name="RastyHeaderFooterLayout" location="layout" />
+	
+	
+</rasty-application>

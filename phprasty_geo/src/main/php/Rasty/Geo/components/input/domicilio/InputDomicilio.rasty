@@ -1,0 +1,54 @@
+<rasty specificationClass="Rasty\Geo\components\input\domicilio\InputDomicilio" templateLocation="InputDomicilio.htm">
+
+
+	<component id="calle" type="InputText">
+		<param name="inputId" value="str:calle" />
+		<param name="name" value="str:calle" />
+		<param name="value" value="domicilio.calle" />
+		<param name="placeholder" value="msg:domicilio.calle" />
+		<param name="styleCss" value="str:uppercase" />
+	</component>
+
+	<component id="numero" type="InputText">
+		<param name="inputId" value="str:numero" />
+		<param name="name" value="str:numero" />
+		<param name="value" value="domicilio.numero" />
+		<param name="placeholder" value="msg:domicilio.numero" />
+	</component>
+
+	<component id="piso" type="InputText">
+		<param name="inputId" value="str:piso" />
+		<param name="name" value="str:piso" />
+		<param name="value" value="domicilio.piso" />
+		<param name="placeholder" value="msg:domicilio.piso" />
+		<param name="styleCss" value="str:uppercase" />
+		<param name="maxChars" value="str:3" />
+	</component>
+	
+	<component id="depto" type="InputText">
+		<param name="inputId" value="str:depto" />
+		<param name="name" value="str:depto" />
+		<param name="value" value="domicilio.depto" />
+		<param name="placeholder" value="msg:domicilio.depto" />
+		<param name="styleCss" value="str:uppercase" />
+		<param name="maxChars" value="str:6" />
+	</component>
+
+	<component id="localidad" type="InputFindEntity">
+		<param name="inputId" value="str:localidad" />
+		<param name="name" value="str:localidad" />
+		<param name="value" value="domicilio.localidad" />
+		<param name="finder" value="localidadFinderClazz" />
+		<param name="placeholder" value="msg:domicilio.localidad" />
+		<param name="finder" value="localidadFinderClazz" />
+		<param name="onSelectCallback" value="str:localidadchange" />
+	</component>
+
+	<component id="codigoPostal" type="InputText">
+		<param name="inputId" value="str:codigoPostal" />
+		<param name="name" value="str:codigoPostal" />
+		<param name="value" value="domicilio.codigoPostal" />
+		<param name="placeholder" value="msg:domicilio.codigoPostal" />
+		<param name="maxChars" value="str:10" />
+	</component>
+</rasty>

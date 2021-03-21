@@ -1,0 +1,9 @@
+<rasty specificationClass="Rasty\Layout\layout\RastyHeaderFooterLayout" templateLocation="RastyHeaderFooterLayout.htm">
+
+	<component id="header" type="Header">
+	</component>
+
+	<component id="footer" type="Footer">
+	</component>
+
+</rasty>

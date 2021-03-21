@@ -1,0 +1,13 @@
+<rasty specificationClass="Rasty\Security\pages\usuarios\Usuarios" templateLocation="pages/usuarios/Usuarios.htm"> 
+
+	<param name="layoutType" value="str:RastySecurityLayout" />
+
+	<component id="usuariosFilter" type="UsuarioFilter">
+		<param name="gridModelClazz" value="modelClazz" />
+		<param name="uicriteriaClazz" value="uicriteriaClazz" />
+		<param name="legend" value="msg:usuario.buscar" />
+		<param name="legendAgain" value="msg:usuario.buscar.again" />
+		<param name="resultDiv" value="str:searchdiv" />
+	</component>
+	
+</rasty>

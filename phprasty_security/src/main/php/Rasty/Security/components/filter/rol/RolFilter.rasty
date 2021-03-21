@@ -1,0 +1,9 @@
+<rasty specificationClass="Rasty\Security\components\filter\rol\RolFilter" templateLocation="RolFilter.htm">
+
+	<component id="name" type="InputText">
+		<param name="name" value="str:name" />
+		<param name="value" value="criteria.name" />
+		<param name="placeholder" value="msg:rol.name" />
+	</component>
+
+</rasty>

@@ -1,0 +1,45 @@
+<rasty specificationClass="Rasty\Geo\components\form\localidad\LocalidadForm" templateLocation="LocalidadForm.htm">
+
+	<param name="error" value="get:error" />
+	<param name="provinciaOid" value="get:provinciaOid" />
+
+	<component id="backSuccess" type="InputHidden">
+		<param name="inputId" value="str:backToOnSuccess" />
+		<param name="name" value="str:backToOnSuccess" />
+		<param name="value" value="backToOnSuccess" />
+	</component>
+
+	<component id="oid" type="InputHidden">
+		<param name="inputId" value="str:oid" />
+		<param name="name" value="str:oid" />
+		<param name="value" value="localidad.oid" />
+	</component>
+	
+	<component id="nombre" type="InputText">
+		<param name="inputId" value="str:nombre" />
+		<param name="name" value="str:nombre" />
+		<param name="value" value="localidad.nombre" />
+		<param name="requiredMessage" value="msg:localidad.nombre.requerido" />
+		<param name="placeholder" value="msg:localidad.nombre" />
+		<param name="styleCss" value="str:uppercase" />
+	</component>
+	
+	<component id="codigoPostal" type="InputText">
+		<param name="inputId" value="str:codigoPostal" />
+		<param name="name" value="str:codigoPostal" />
+		<param name="value" value="localidad.codigoPostal" />
+		<param name="requiredMessage" value="msg:localidad.codigoPostal.requerido" />
+		<param name="placeholder" value="msg:localidad.codigoPostal" />
+		<param name="styleCss" value="str:uppercase" />
+	</component>
+	
+	<component id="provincia" type="InputFindEntity">
+		<param name="inputId" value="str:provincia" />
+		<param name="name" value="str:provincia" />
+		<param name="value" value="provincia" />
+		<param name="placeholder" value="msg:localidad.provincia" />
+		<param name="finder" value="provinciaFinderClazz" />
+		<param name="onSelectCallback" value="str:provinciachange" />
+	</component>
+	
+</rasty>

@@ -1,0 +1,9 @@
+<rasty specificationClass="Rasty\Crud\pages\entities\EntitiesTreeList" templateLocation="pages/entities/EntitiesTreeList.htm"> 
+
+	<component id="treegrid" type="EntityTreeGrid">
+	
+		<param name="model" value="gridModel" />
+	</component>
+	
+	
+</rasty>

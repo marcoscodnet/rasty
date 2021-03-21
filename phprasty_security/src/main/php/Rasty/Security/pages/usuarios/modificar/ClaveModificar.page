@@ -1,0 +1,14 @@
+<rasty specificationClass="Rasty\Security\pages\usuarios\modificar\ClaveModificar" templateLocation="pages/usuarios/modificar/ClaveModificar.htm"> 
+
+	<param name="layoutType" value="str:RastySecurityLayout" />
+
+	<component id="cambiarClaveForm" type="CambiarClaveForm">
+		<param name="legend" value="msg:usuario.modificar.clave.legend" />
+		<param name="action" value="linkActionModificarClave" />
+		<param name="method" value="str:post" />
+		<param name="backToOnSuccess" value="str:Usuarios" />
+		<param name="backToOnCancel" value="str:Usuario" />
+		<param name="usuario" value="usuario" />
+	</component>
+	
+</rasty>

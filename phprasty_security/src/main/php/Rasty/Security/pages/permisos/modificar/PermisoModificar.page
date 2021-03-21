@@ -1,0 +1,16 @@
+<rasty specificationClass="Rasty\Security\pages\permisos\modificar\PermisoModificar" templateLocation="pages/permisos/modificar/PermisoModificar.htm"> 
+
+	<param name="layoutType" value="str:RastySecurityLayout" />
+	<param name="permisoOid" value="get:oid" />
+
+
+	<component id="permisoForm" type="PermisoForm">
+		<param name="legend" value="msg:permiso.modificar.legend" />
+		<param name="action" value="linkActionModificarPermiso" />
+		<param name="method" value="str:post" />
+		<param name="backToOnSuccess" value="get:backTo" />
+		<param name="backToOnCancel" value="get:backTo" />
+		<param name="permiso" value="permiso" />
+	</component>
+	
+</rasty>

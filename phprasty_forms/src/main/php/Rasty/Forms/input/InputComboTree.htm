@@ -1,0 +1,32 @@
+<!-- BEGIN:main -->
+<div class="decorator-select">
+<select   <!-- BEGIN: property --> {name}="{value}" <!-- END: property -->
+ <!-- BEGIN:required -->
+ jVal="{valid:function (val) { return required(val,'{msg_required}'); }}"
+ <!-- END:required -->
+>
+	<!-- BEGIN: option_empty -->
+	<option value="">{empty_label}</option>
+	<!-- END: option_empty -->
+	
+    <!-- BEGIN: option -->
+    	<!-- BEGIN: group -->		
+			<optgroup label="group_label"  id="group_id" >
+	    	<!-- BEGIN: subitem -->	
+	    	<option value={value}>{label}</option>
+	    	<!-- BEGIN: subitem -->
+    		</optgroup>
+    	
+    	<!-- END: group -->		
+    	
+    	<!-- BEGIN: item -->	
+    	<option value={value}>{label}</option>
+    	<!-- BEGIN: item -->	
+    		
+	<!-- END: option -->
+</select>
+</div>
+<!-- BEGIN:readOnly -->
+<input type="hidden" name="{name}" value="{value}">
+<!-- END:readOnly -->
+<!-- END:main -->

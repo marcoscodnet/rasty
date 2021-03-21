@@ -1,0 +1,5 @@
+<rasty specificationClass="Rasty\Security\components\boxes\usuario\UsuarioBox" templateLocation="UsuarioBox.htm">
+
+	<param name="usuarioOid" value="get:usuarioOid" />
+
+</rasty>

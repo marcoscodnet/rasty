@@ -1,0 +1,14 @@
+{
+    "name": "codnet/phprasty-workflow",
+    "type": "library","version":"1.0.0",
+    "description": "Workflow components for phprasty",
+    "keywords": ["php", "framework", "components", "workflow", "codnet"],
+    "homepage": "http://www.codnet.com.ar",
+    "license": "GPL v2",
+    "authors": [
+        {"name": "Bernardo Iribarne", "email": "ber.iribarne@gmail.com"}
+    ],
+    "autoload": {
+        "psr-0": { "Rasty\\Workflow": "src/main/php" }
+    }
+}

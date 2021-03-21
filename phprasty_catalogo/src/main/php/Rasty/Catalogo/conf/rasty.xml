@@ -1,0 +1,60 @@
+<rasty-application>
+
+	<!-- declaración de las páginas -->
+	<page name="TiposDocumento" extend="EntitiesList" class="Rasty\Catalogo\pages\tiposDocumento\TiposDocumento" url="tiposDocumento"/>
+	<page name="TipoDocumentoAdd" extend="EntityAdd" class="Rasty\Catalogo\pages\tiposDocumento\TipoDocumentoAdd" url="tiposDocumento/agregar"/>
+	<page name="TipoDocumentoView" extend="EntityView" class="Rasty\Catalogo\pages\tiposDocumento\TipoDocumentoView" url="tiposDocumento/consultar"/>
+	<page name="TipoDocumentoUpdate" extend="EntityUpdate" class="Rasty\Catalogo\pages\tiposDocumento\TipoDocumentoUpdate" url="tiposDocumento/modificar"/>
+	<page name="TipoDocumentoDelete" extend="EntityDelete" class="Rasty\Catalogo\pages\tiposDocumento\TipoDocumentoDelete" url="tiposDocumento/eliminar"/>
+
+	<page name="CondicionesIva" extend="EntitiesList" class="Rasty\Catalogo\pages\condicionesIva\CondicionesIva" url="condicionesIva"/>
+	<page name="CondicionIvaAdd" extend="EntityAdd" class="Rasty\Catalogo\pages\condicionesIva\CondicionIvaAdd" url="condicionesIva/agregar"/>
+	<page name="CondicionIvaView" extend="EntityView" class="Rasty\Catalogo\pages\condicionesIva\CondicionIvaView" url="condicionesIva/consultar"/>
+	<page name="CondicionIvaUpdate" extend="EntityUpdate" class="Rasty\Catalogo\pages\condicionesIva\CondicionIvaUpdate" url="condicionesIva/modificar"/>
+	<page name="CondicionIvaDelete" extend="EntityDelete" class="Rasty\Catalogo\pages\condicionesIva\CondicionIvaDelete" url="condicionesIva/eliminar"/>
+	
+	<page name="Generos" extend="EntitiesList" class="Rasty\Catalogo\pages\generos\Generos" url="generos"/>
+	<page name="GeneroAdd" extend="EntityAdd" class="Rasty\Catalogo\pages\generos\GeneroAdd" url="generos/agregar"/>
+	<page name="GeneroView" extend="EntityView" class="Rasty\Catalogo\pages\generos\GeneroView" url="generos/consultar"/>
+	<page name="GeneroUpdate" extend="EntityUpdate" class="Rasty\Catalogo\pages\generos\GeneroUpdate" url="generos/modificar"/>
+	<page name="GeneroDelete" extend="EntityDelete" class="Rasty\Catalogo\pages\generos\GeneroDelete" url="generos/eliminar"/>
+	
+	<page name="EstadosCivil" extend="EntitiesList" class="Rasty\Catalogo\pages\estadosCivil\EstadosCivil" url="estadosCivil"/>
+	<page name="EstadoCivilAdd" extend="EntityAdd" class="Rasty\Catalogo\pages\estadosCivil\EstadoCivilAdd" url="estadosCivil/agregar"/>
+	<page name="EstadoCivilView" extend="EntityView" class="Rasty\Catalogo\pages\estadosCivil\EstadoCivilView" url="estadosCivil/consultar"/>
+	<page name="EstadoCivilUpdate" extend="EntityUpdate" class="Rasty\Catalogo\pages\estadosCivil\EstadoCivilUpdate" url="estadosCivil/modificar"/>
+	<page name="EstadoCivilDelete" extend="EntityDelete" class="Rasty\Catalogo\pages\estadosCivil\EstadoCivilDelete" url="estadosCivil/eliminar"/>
+
+	<!-- declaración de los componentes -->
+	
+	<!-- forms -->
+	<component name="CatalogoForm" location="components/form/catalogo" />
+	
+	<!-- filters -->
+	<component name="CatalogoFilter" location="components/filter/catalogo" />
+	<component name="TipoDocumentoFilter" extend="CatalogoFilter" class="Rasty\Catalogo\components\filter\catalogo\TipoDocumentoFilter" />
+	<component name="EstadoCivilFilter" extend="CatalogoFilter" class="Rasty\Catalogo\components\filter\catalogo\EstadoCivilFilter" />
+	<component name="CondicionIvaFilter" extend="CatalogoFilter" class="Rasty\Catalogo\components\filter\catalogo\CondicionIvaFilter" />
+	<component name="GeneroFilter" extend="CatalogoFilter" class="Rasty\Catalogo\components\filter\catalogo\GeneroFilter" />
+	
+	<!-- boxes -->
+	<component name="CatalogoBox" location="components/boxes/catalogo" />
+
+	<!-- declaración de las actions -->
+	<action name="AgregarTipoDocumento" class="Rasty\Catalogo\actions\tiposDocumento\AgregarTipoDocumento" url="tipoDocumento/agregar"/>
+	<action name="ModificarTipoDocumento" class="Rasty\Catalogo\actions\tiposDocumento\ModificarTipoDocumento" url="tipoDocumento/modificar"/>
+	<action name="BorrarTipoDocumento" class="Rasty\Catalogo\actions\tiposDocumento\BorrarTipoDocumento" url="tipoDocumento/eliminar"/>
+	
+	<action name="AgregarCondicionIva" class="Rasty\Catalogo\actions\condicionesIva\AgregarCondicionIva" url="condicionIva/agregar"/>
+	<action name="ModificarCondicionIva" class="Rasty\Catalogo\actions\condicionesIva\ModificarCondicionIva" url="condicionIva/modificar"/>
+	<action name="BorrarCondicionIva" class="Rasty\Catalogo\actions\condicionesIva\BorrarCondicionIva" url="condicionIva/eliminar"/>
+	
+	<action name="AgregarGenero" class="Rasty\Catalogo\actions\generos\AgregarGenero" url="genero/agregar"/>
+	<action name="ModificarGenero" class="Rasty\Catalogo\actions\generos\ModificarGenero" url="genero/modificar"/>
+	<action name="BorrarGenero" class="Rasty\Catalogo\actions\generos\BorrarGenero" url="genero/eliminar"/>
+	
+	<action name="AgregarEstadoCivil" class="Rasty\Catalogo\actions\estadosCivil\AgregarEstadoCivil" url="estadoCivil/agregar"/>
+	<action name="ModificarEstadoCivil" class="Rasty\Catalogo\actions\estadosCivil\ModificarEstadoCivil" url="estadoCivil/modificar"/>
+	<action name="BorrarEstadoCivil" class="Rasty\Catalogo\actions\estadosCivil\BorrarEstadoCivil" url="estadoCivil/eliminar"/>
+	
+</rasty-application>

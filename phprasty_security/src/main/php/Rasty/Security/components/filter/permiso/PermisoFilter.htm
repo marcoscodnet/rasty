@@ -1,0 +1,121 @@
+<!-- BEGIN:main -->
+<script>
+
+
+function submitBuscarPermisos(){
+
+	$( "#page" ).val( 1 );
+	
+	submitBuscar("{WEB_PATH}", "#permisos_filter{id}", "#{resultDiv}");
+}
+
+function ordenarPermisos(name, type){
+
+	$( "#orderBy" ).val(name);
+	$( "#orderByType" ).val(type);
+	
+	submitBuscar("{WEB_PATH}", "#permisos_filter{id}", "#{resultDiv}");
+}
+
+function paginarPermisos(page){
+	$( "#page" ).val(page);
+
+	submitBuscar("{WEB_PATH}", "#permisos_filter{id}", "#{resultDiv}");
+}
+
+function seleccionarPermiso(event, oid, rowId, checkboxId){
+
+
+	/* muestro un pop con las opciones sobre el producto */
+	
+	gotoLink("{linkSeleccionar}?oid="+oid);
+	
+}
+
+function eliminarCallback(data){
+
+	console.log( data["info"] );
+	submitBuscar("{WEB_PATH}", "#permisos_filter{id}", "#{resultDiv}");
+}
+
+
+$(document).ready(function(){
+
+	$(document).ready(function() {
+		  $(window).keydown(function(event){
+		    if(event.keyCode == 13) {
+		      event.preventDefault();
+		      return false;
+		    }
+		  });
+		});
+	
+	submitBuscar("{WEB_PATH}", "#permisos_filter{id}", "#{resultDiv}");
+
+	 $(".item input").keyup(function (e) {
+         if (e.keyCode == 13) {
+             // función para capturar el enter en el filtro default.
+        	 submitBuscar("{WEB_PATH}", "#permisos_filter{id}", "#{resultDiv}");
+         }
+     });
+	
+});
+
+
+</script>
+
+
+<div id="divPermisos{id}Toggle1" style="display:none">
+<form class="cuentas_form">
+		<fieldset>
+		<legend class="search_again" id="legend_buscar{id}_open">{legend_again}</legend>
+		</fieldset>
+</form>		
+</div>
+<div id="divPermisos{id}Toggle2">
+<form class="cuentas_form" id="permisos_filter{id}">
+
+		<fieldset>
+		
+		<legend id="legend_buscar{id}">{legend}</legend>		
+		
+		<div class="row">
+			<div class="col-6">
+				<div class="item">
+				    <label for="name">{lbl_name}:</label>
+			    	<rasty id="name" />
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="item">
+				    <label for="parent">{lbl_parent}:</label>
+			    	<rasty id="parent" />
+				</div>
+			</div>
+		</div>	
+	</fieldset>
+	
+	<input type="hidden" name="model" value="{model}">
+	<input type="hidden" name="filter" value="{filter}">
+	<input type="hidden" name="sortCallback" value="ordenarPermisos">
+	<input type="hidden" name="paginationCallback" value="paginarPermisos">
+	<input type="hidden" name="selectRowCallback" value="{selectRowCallback}">
+	<input type="hidden" id="orderBy" name="orderBy">
+	<input type="hidden" id="orderByType" name="orderByType" value="ASC">
+	<input type="hidden" id="page" name="page" value="1">
+
+</form>
+<form  class="cuentas_form" id="buttons{id}">
+	<fieldset class="tblFooters">
+	
+		
+		<!-- input type="button" value="{lbl_submit}" id="input_submit_ajax_Producto{id}" onclick="javascript: $( '#page' ).val( 1 ); submitBuscar('{WEB_PATH}', '#permisos_filter{id}', '#{resultDiv}');"-->
+		
+		<button id="input_submit_ajax_Producto{id}"  type="button"  onclick="javascript: $( '#page' ).val( 1 ); submitBuscar('{WEB_PATH}', '#permisos_filter{id}', '#{resultDiv}');"><i class="icon-search on-left"></i>{lbl_submit}</button>
+		
+		<!-- input type="button" value="Limpiar" id="input_button_2" onclick="javascript: cleanForm('permisos_filter'); "-->
+	
+	</fieldset>
+</form>	
+</div>
+<!-- END:main -->

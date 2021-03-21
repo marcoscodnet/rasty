@@ -1,0 +1,15 @@
+<rasty specificationClass="Rasty\Security\pages\usuarios\recuperarClave\NuevaClaveConfirmar" templateLocation="pages/usuarios/recuperarClave/NuevaClaveConfirmar.htm"> 
+
+	<param name="layoutType" value="str:RastySecurityPublicLayout" />
+	<param name="codigoValidacion" value="get:code" />
+
+	<component id="nuevaClaveConfirmarForm" type="NuevaClaveConfirmarForm">
+		<param name="legend" value="msg:registracion.confirmar.legend" />
+		<param name="backToOnSuccess" value="get:backTo" />
+		<param name="backToOnCancel" value="get:backTo" />
+		<param name="action" value="linkActionConfirmarNuevaClave" />
+		<param name="method" value="str:post" />
+		<param name="newPasswordRequest" value="newPasswordRequest" />
+	</component>
+	
+</rasty>

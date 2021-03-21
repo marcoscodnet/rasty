@@ -1,0 +1,29 @@
+<!-- BEGIN:main -->
+	<nav id="{id}">
+ 		<ul class="" id="menuItems">
+			
+			<!-- BEGIN: menuTitle -->
+			<li class="menu-li menu-li-divider">
+				<div class="meun-ui-btn-inner">
+				
+					<div class="menu-ui-btn-text"><a href="#" onclick="{onclick}" class="menu-ui-link-inherit">{menuLabel}</a></div>
+					<span class="menu-ui-icon menu-ui-icon-right menu-ui-icon-delete"></span>
+				</div>
+			</li>
+			<!-- END: menuTitle -->
+			<!-- BEGIN: menuGroup -->
+			<!-- BEGIN: menuOption -->
+			<li class="menu-li">
+				<div class="menu-ui-btn-inner menu-ui-btn-inner-icon-right">
+					<div class="menu-ui--btn-text"><a href="#" onclick="{onclick}" class="menu-ui-link-inherit">
+					<!-- BEGIN: icon --><span class="{iconClass}"></span><!-- END: icon --><!-- BEGIN: image --><img style="border:0;margin-right:10px;" src="{src}"/><!-- END: image --> {label}</a></div>
+					<span class="menu-ui-icon menu-ui-icon-right menu-ui-icon-arrow-r"></span>
+				</div>
+			</li>
+			<!-- END: menuOption -->
+			
+			<!-- END: menuGroup -->
+		</ul>	
+	</nav>
+	<div style="clear: both;"></div>
+<!-- END:main -->

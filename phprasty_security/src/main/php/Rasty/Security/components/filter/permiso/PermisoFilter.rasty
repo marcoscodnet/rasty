@@ -1,0 +1,20 @@
+<rasty specificationClass="Rasty\Security\components\filter\permiso\PermisoFilter" templateLocation="PermisoFilter.htm">
+
+	<component id="name" type="InputText">
+		<param name="name" value="str:name" />
+		<param name="value" value="criteria.name" />
+		<param name="placeholder" value="msg:permiso.name" />
+	</component>
+	
+	
+	<component id="parent" type="InputCombo">
+		<param name="inputId" value="str:parent" />
+		<param name="name" value="str:parent" />
+		<param name="value" value="criteria.parent" />
+		<param name="options" value="permisos" />
+		<param name="emptyOptionLabel" value="msg:combo.empty" />
+		<param name="finder" value="PermisoFinderClazz" />
+	</component>
+
+
+</rasty>

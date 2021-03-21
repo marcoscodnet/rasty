@@ -1,0 +1,14 @@
+<rasty specificationClass="Rasty\Security\pages\usuarios\eliminar\UsuarioEliminar" templateLocation="pages/usuarios/eliminar/UsuarioEliminar.htm"> 
+
+	<param name="layoutType" value="str:RastySecurityLayout" />
+	<param name="usuarioOid" value="get:oid" />
+	<param name="error" value="get:error" />
+
+
+	<component id="oid" type="InputHidden">
+		<param name="inputId" value="str:oid" />
+		<param name="name" value="str:oid" />
+		<param name="value" value="usuario.oid" />
+	</component>
+	
+</rasty>

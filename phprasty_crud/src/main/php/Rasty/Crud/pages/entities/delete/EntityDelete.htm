@@ -1,0 +1,36 @@
+<!-- BEGIN: main-->
+
+<div id="editar">
+
+	<center><h1>{title}</h1></center>
+
+	<div class="row">
+		<div class="col-12">
+			<form class="crudform" action="{action}" id="delete_form" method="POST">
+				
+				<rasty id="oid" />
+				
+				<fieldset style="padding:20px;">
+					<legend>{legend}</legend>
+			
+					{box}
+							
+				</fieldset>
+			</form>
+			
+			<form  class="crudform" id="buttons{inputId}">
+				<fieldset class="tblFooters">
+	
+					<button type="button"  id="input_submit" onclick="javascript: submitFormulario('delete_form'); "><i class="icon-checkmark on-left"></i>{lbl_confirm}</button>
+
+					<button type="button"  id="input_button_2" onclick="javascript: window.location.href = '{cancel}'; "><i class="icon-cancel-2 on-left"></i>{lbl_cancel}</button>
+	
+				</fieldset>
+			</form>	
+			
+		</div>
+	</div>
+	
+</div>
+
+<!-- END: main-->

@@ -1,0 +1,55 @@
+<!-- BEGIN:main -->
+
+<script>
+
+function checkForm(){
+
+}
+
+
+$(function() {
+
+	$("#name").focus();
+	
+});
+</script>
+
+<div>
+<form class="rasty_form" id="rol_form" onsubmit="return  validate( 'rol_form' );" action="{action}" method="{method}">
+
+		<fieldset>
+		<legend>{legend}</legend>
+
+		<rasty id="backSuccess" />
+	    <rasty id="oid" />
+		
+		<div class="item">
+		    <label for="name">{lbl_name} *:</label>
+		    <rasty id="name" />
+		</div>
+		
+		<div class="item">
+		    <label for="description">{lbl_description}:</label>
+		    <rasty id="description" />
+		</div>
+		
+	</fieldset>
+</form>
+
+<!-- BEGIN: msg_error -->
+<fieldset class="ui-state-error">
+	{msg}	
+</fieldset>
+<!-- END: msg_error -->
+
+<form  class="rasty_form" id="buttons{inputId}">
+	<fieldset class="tblFooters">
+	
+		<button type="button"  id="input_submit" onclick="javascript: $(  '#rol_form' ).submit(); "><i class="icon-checkmark on-left"></i>{lbl_submit}</button>
+
+		<button type="button"  id="input_button_2" onclick="javascript: window.location.href = '{cancel}'; "><i class="icon-cancel-2 on-left"></i>{lbl_cancel}</button>
+	
+	</fieldset>
+</form>	
+</div>
+<!-- END:main -->

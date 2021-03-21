@@ -1,0 +1,9 @@
+<rasty specificationClass="Rasty\Security\components\filter\usuario\UsuarioFilter" templateLocation="UsuarioFilter.htm">
+
+	<component id="username" type="InputText">
+		<param name="name" value="str:username" />
+		<param name="value" value="criteria.username" />
+		<param name="placeholder" value="msg:usuario.username" />
+	</component>
+
+</rasty>

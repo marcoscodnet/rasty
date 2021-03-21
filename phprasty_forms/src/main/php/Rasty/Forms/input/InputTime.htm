@@ -1,0 +1,27 @@
+<!-- BEGIN: main -->
+<script>
+	
+    $(function() {
+    	$("#{inputId}").mask("99:99", 
+    	    	{completed:function(){
+					$value = this.val();
+					var hora = $value.substr(0,2) ;
+					var minutos = $value.substr(3,2) ;
+					if(hora>"24" || minutos>"59")
+						this.val("00:00");
+				}});
+    });
+
+
+</script>
+<input type='text'    
+<!-- BEGIN: property --> {name}="{value}" <!-- END: property -->
+<!-- BEGIN:required -->
+jVal="{valid:function (val) { return required(val,'{requiredMessage}'); }}"
+<!-- END:required -->
+
+/>
+<!-- BEGIN:readOnly -->
+<input type="hidden" name="{name}" value="{value}">
+<!-- END:readOnly -->
+<!-- END: main -->

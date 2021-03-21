@@ -1,0 +1,33 @@
+<rasty-application>
+
+	<!-- declaración de los componentes -->
+	<component name="InputText" location="input" />
+	<component name="InputCheckBox" location="input" />
+	<component name="InputRadioButton" location="input" />
+	<component name="InputTextArea" location="input" />
+	<component name="InputNumber" location="input" />
+	<component name="InputDate" location="input" />
+	<component name="InputDateMask" location="input" />
+	<component name="InputTime" location="input" />
+	<component name="InputCombo" location="input" />
+	<component name="InputComboTree" location="input" />
+	<component name="InputAutocomplete" location="input" />
+	<component name="InputFindEntity" location="input" />
+	<component name="InputHidden" location="input" />
+	<component name="InputPassword" location="input" />
+	<component name="InputCurrency" location="input" />
+	<component name="InputPercentage" location="input" />
+
+	<component name="AutocompleteEntities" location="finder" />
+	<component name="FinderPopup" location="finderpopup" />
+	<component name="AddPopup" location="addpopup" />
+	
+	<component name="Button" location="buttons" />
+
+	<component name="UploadImage" location="uploadImage" />
+	
+	<!-- declaración de las actions -->
+	<action name="UploadImage" class="Rasty\Forms\uploadImage\actions\UploadImageJson" url="uploadImage"/>
+	<action name="GenerateImageThumbnail" class="Rasty\Forms\uploadImage\actions\GenerateImageThumbnailJson" url="generateThumbnail"/>
+	
+</rasty-application>

@@ -1,0 +1,44 @@
+<rasty specificationClass="Rasty\Security\components\form\usuario\CambiarClaveForm" templateLocation="CambiarClaveForm.htm">
+
+	<param name="error" value="get:error" />
+
+	<component id="backSuccess" type="InputHidden">
+		<param name="inputId" value="str:backToOnSuccess" />
+		<param name="name" value="str:backToOnSuccess" />
+		<param name="value" value="backToOnSuccess" />
+	</component>
+
+	<component id="oid" type="InputHidden">
+		<param name="inputId" value="str:oid" />
+		<param name="name" value="str:oid" />
+		<param name="value" value="usuario.oid" />
+	</component>
+
+	<component id="oldPassword" type="InputPassword">
+		<param name="inputId" value="str:oldPassword" />
+		<param name="name" value="str:oldPassword" />
+		<param name="value" value="oldPassword" />
+		<param name="requiredMessage" value="msg:usuario.password.old.required" />
+		<param name="placeholder" value="msg:usuario.password.old" />
+	</component>
+
+	<component id="password" type="InputPassword">
+		<param name="inputId" value="str:newPassword" />
+		<param name="name" value="str:newPassword" />
+		<param name="value" value="newPassword" />
+		<param name="requiredMessage" value="msg:usuario.newPassword.required" />
+		<param name="placeholder" value="msg:usuario.newPassword" />
+		<param name="maxChars" value="str:20" />
+		<param name="properties" value="claveProperties" />
+	</component>
+	
+	<component id="passwordRepeat" type="InputPassword">
+		<param name="inputId" value="str:repetirNewPassword" />
+		<param name="name" value="str:repetirNewPassword" />
+		<param name="value" value="repetirNewPassword" />
+		<param name="requiredMessage" value="msg:usuario.newPassword.repeat.required" />
+		<param name="placeholder" value="msg:usuario.newPassword.repeat" />
+		<param name="maxChars" value="str:20" />
+	</component>
+
+</rasty>

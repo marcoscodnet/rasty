@@ -1,0 +1,42 @@
+<rasty specificationClass="Rasty\Security\components\form\permiso\PermisoForm" templateLocation="PermisoForm.htm">
+
+	<param name="error" value="get:error" />
+
+	<component id="backSuccess" type="InputHidden">
+		<param name="inputId" value="str:backToOnSuccess" />
+		<param name="name" value="str:backToOnSuccess" />
+		<param name="value" value="backToOnSuccess" />
+	</component>
+
+	<component id="oid" type="InputHidden">
+		<param name="inputId" value="str:oid" />
+		<param name="name" value="str:oid" />
+		<param name="value" value="permiso.oid" />
+	</component>
+
+	<component id="name" type="InputText">
+		<param name="inputId" value="str:name" />
+		<param name="name" value="str:name" />
+		<param name="value" value="permiso.name" />
+		<param name="requiredMessage" value="msg:permiso.name.required" />
+		<param name="placeholder" value="msg:permiso.name" />
+		
+	</component>
+
+	<component id="description" type="InputText">
+		<param name="inputId" value="str:description" />
+		<param name="name" value="str:description" />
+		<param name="value" value="permiso.description" />
+		<param name="placeholder" value="msg:permiso.description" />
+	</component>
+
+	<component id="parent" type="InputCombo">
+		<param name="inputId" value="str:parent" />
+		<param name="name" value="str:parent" />
+		<param name="value" value="permiso.parent" />
+		<param name="options" value="permisos" />
+		<param name="emptyOptionLabel" value="msg:combo.empty" />
+		<param name="finder" value="PermisoFinderClazz" />
+	</component>
+
+</rasty>

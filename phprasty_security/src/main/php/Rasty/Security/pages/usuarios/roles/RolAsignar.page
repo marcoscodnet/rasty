@@ -1,0 +1,16 @@
+<rasty specificationClass="Rasty\Security\pages\usuarios\roles\RolAsignar" templateLocation="pages/usuarios/roles/RolAsignar.htm"> 
+
+	<param name="layoutType" value="str:RastySecurityLayout" />
+	<param name="usuarioOid" value="get:oid" />
+
+
+	<component id="usuarioRolesForm" type="UsuarioRolesForm">
+		<param name="legend" value="msg:usuario.asignarPermisos.legend" />
+		<param name="action" value="linkActionAsignarRolesUsuario" />
+		<param name="method" value="str:post" />
+		<param name="backToOnSuccess" value="get:backTo" />
+		<param name="backToOnCancel" value="get:backTo" />
+		<param name="usuario" value="usuario" />
+	</component>
+	
+</rasty>

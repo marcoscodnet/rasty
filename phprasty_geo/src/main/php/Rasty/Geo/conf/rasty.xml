@@ -1,0 +1,55 @@
+<rasty-application>
+
+	<!-- declaración de las páginas -->
+	<page name="Paises" extend="EntitiesList" class="Rasty\Geo\pages\paises\Paises" url="paises"/>
+	<page name="PaisAdd" extend="EntityAdd" class="Rasty\Geo\pages\paises\PaisAdd" url="paises/agregar"/>
+	<page name="PaisView" extend="EntityView" class="Rasty\Geo\pages\paises\PaisView" url="paises/consultar"/>
+	<page name="PaisUpdate" extend="EntityUpdate" class="Rasty\Geo\pages\paises\PaisUpdate" url="paises/modificar"/>
+	<page name="PaisDelete" extend="EntityDelete" class="Rasty\Geo\pages\paises\PaisDelete" url="paises/eliminar"/>
+	
+	<page name="Provincias" extend="EntitiesList" class="Rasty\Geo\pages\provincias\Provincias" url="provincias"/>
+	<page name="ProvinciaAdd" extend="EntityAdd" class="Rasty\Geo\pages\provincias\ProvinciaAdd" url="provincias/agregar"/>
+	<page name="ProvinciaView" extend="EntityView" class="Rasty\Geo\pages\provincias\ProvinciaView" url="provincias/consultar"/>
+	<page name="ProvinciaUpdate" extend="EntityUpdate" class="Rasty\Geo\pages\provincias\ProvinciaUpdate" url="provincias/modificar"/>
+	<page name="ProvinciaDelete" extend="EntityDelete" class="Rasty\Geo\pages\provincias\ProvinciaDelete" url="provincias/eliminar"/>
+		
+	<page name="Localidades" extend="EntitiesList" class="Rasty\Geo\pages\localidades\Localidades" url="localidades"/>
+	<page name="LocalidadAdd" extend="EntityAdd" class="Rasty\Geo\pages\localidades\LocalidadAdd" url="localidades/agregar"/>
+	<page name="LocalidadView" extend="EntityView" class="Rasty\Geo\pages\localidades\LocalidadView" url="localidades/consultar"/>
+	<page name="LocalidadUpdate" extend="EntityUpdate" class="Rasty\Geo\pages\localidades\LocalidadUpdate" url="localidades/modificar"/>
+	<page name="LocalidadDelete" extend="EntityDelete" class="Rasty\Geo\pages\localidades\LocalidadDelete" url="localidades/eliminar"/>
+			
+	<!-- declaración de los componentes -->
+	
+	<!-- forms -->
+	<component name="PaisForm" location="components/form/pais" />
+	<component name="ProvinciaForm" location="components/form/provincia" />
+	<component name="LocalidadForm" location="components/form/localidad" />
+	
+	<!-- filters -->
+	<component name="PaisFilter" location="components/filter/pais" />
+	<component name="ProvinciaFilter" location="components/filter/provincia" />
+	<component name="LocalidadFilter" location="components/filter/localidad" />
+	
+	<!-- boxes -->
+	<component name="PaisBox" location="components/boxes/pais" />
+	<component name="ProvinciaBox" location="components/boxes/provincia" />
+	<component name="LocalidadBox" location="components/boxes/localidad" />
+
+	<!-- inputs -->
+	<component name="InputDomicilio" location="components/input/domicilio" />
+
+	<!-- declaración de las actions -->
+	<action name="AgregarPais" class="Rasty\Geo\actions\paises\AgregarPais" url="pais/agregar"/>
+	<action name="ModificarPais" class="Rasty\Geo\actions\paises\ModificarPais" url="pais/modificar"/>
+	<action name="BorrarPais" class="Rasty\Geo\actions\paises\BorrarPais" url="pais/eliminar"/>
+
+	<action name="AgregarProvincia" class="Rasty\Geo\actions\provincias\AgregarProvincia" url="provincia/agregar"/>
+	<action name="ModificarProvincia" class="Rasty\Geo\actions\provincias\ModificarProvincia" url="provincia/modificar"/>
+	<action name="BorrarProvincia" class="Rasty\Geo\actions\provincias\BorrarProvincia" url="provincia/eliminar"/>
+
+	<action name="AgregarLocalidad" class="Rasty\Geo\actions\localidades\AgregarLocalidad" url="localidad/agregar"/>
+	<action name="ModificarLocalidad" class="Rasty\Geo\actions\localidades\ModificarLocalidad" url="localidad/modificar"/>
+	<action name="BorrarLocalidad" class="Rasty\Geo\actions\localidades\BorrarLocalidad" url="localidad/eliminar"/>
+	
+</rasty-application>

@@ -1,0 +1,67 @@
+<!-- BEGIN:main -->
+
+<script>
+
+function checkForm(){
+
+	if( $("password").val() == $("passwordRepeat").val() )
+		return validate('clave_form');
+
+	else{
+		return false;
+	}
+	
+}
+
+
+$(function() {
+
+	$("#password").focus();
+	
+});
+</script>
+
+<div>
+<form class="rasty_form" id="clave_form" onsubmit="return  checkForm();" action="{action}" method="{method}">
+
+		<fieldset>
+		<legend>{legend}</legend>
+
+		<rasty id="backSuccess" />
+	    <rasty id="oid" />
+		
+		<div class="item">
+		    <label for="oldPassword">{lbl_oldPassword} *:</label>
+		    <rasty id="oldPassword" />
+		</div>
+		
+		<div class="item">
+		    <label for="password">{lbl_password} *:</label>
+		    <rasty id="password" />
+		</div>
+		
+		<div class="item">
+		    <label for="passwordRepeat">{lbl_passwordRepeat} *:</label>
+		    <rasty id="passwordRepeat" />
+		</div>
+		
+	</fieldset>
+</form>
+
+<!-- BEGIN: msg_error -->
+<fieldset class="ui-state-error">
+	{msg}	
+</fieldset>
+<!-- END: msg_error -->
+
+<form  class="rasty_form" id="buttons{inputId}">
+	<fieldset class="tblFooters">
+	
+		<button type="button"  id="input_submit" onclick="javascript: submitFormulario('clave_form'); "><i class="icon-checkmark on-left"></i>{lbl_submit}</button>
+
+		<button type="button"  id="input_button_2" onclick="javascript: window.location.href = '{cancel}'; "><i class="icon-cancel-2 on-left"></i>{lbl_cancel}</button>
+	
+	</fieldset>
+</form>	
+</div>
+<!-- END:main -->

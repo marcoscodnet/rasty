@@ -1,0 +1,66 @@
+<!-- BEGIN:main -->
+<script language="javascript"
+	src="{WEB_PATH}js/autocomplete/simpleAutoComplete.js"></script>
+<link rel="stylesheet"
+	href="{WEB_PATH}css/autocomplete/simpleAutoComplete.css"
+	type="text/css" />
+<script>
+function provinciachange(){
+	
+}
+
+function paischange(){
+}
+
+function localidadchange(entity){
+
+	$("#codigoPostal").val(entity["codigoPostal"]);
+	
+}
+</script>
+
+		<div class="row">
+			<div class="col-6">
+				<div class="item">
+				    <label for="calle">{lbl_calle}:</label>
+				    <rasty id="calle" />
+				</div>
+			</div>
+			<div class="col-2">
+				<div class="item">
+				    <label for="numero">{lbl_numero}:</label>
+				    <rasty id="numero" />
+				</div>
+			</div>
+			<div class="col-2">
+				<div class="item">
+				    <label for="piso">{lbl_piso}:</label>
+				    <rasty id="piso" />
+				</div>
+			</div>
+			<div class="col-2">
+				<div class="item">
+				    <label for="depto">{lbl_depto}:</label>
+				    <rasty id="depto" />
+				</div>
+			</div>
+			<div style="clear: both"></div>
+		</div>	
+
+		<div class="row">
+			<div class="col-6">
+				<div class="item">
+		    		<label for="localidad">{lbl_localidad}:</label>
+		    		<rasty id="localidad" />
+				</div>
+			</div>
+			<div class="col-2">
+				<div class="item">
+				    <label for="codigoPostal">{lbl_codigoPostal}:</label>
+				    <rasty id="codigoPostal" />
+				</div>
+			</div>
+			<div style="clear: both"></div>
+		</div>	
+
+<!-- END: main -->

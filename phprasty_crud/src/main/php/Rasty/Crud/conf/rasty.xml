@@ -1,0 +1,23 @@
+<rasty-application>
+
+	<!-- declaración de las páginas -->
+	<page name="EntitiesList" location="pages/entities/EntitiesList.page" url="crud/entities"/>
+	<page name="EntityAdd" location="pages/entities/add/EntityAdd.page" url="crud/entities/add"/>	
+	<page name="EntityUpdate" location="pages/entities/update/EntityUpdate.page" url="crud/entities/update"/>	
+	<page name="EntityView" location="pages/entities/view/EntityView.page" url="crud/entities/view"/>	
+	<page name="EntityDelete" location="pages/entities/delete/EntityDelete.page" url="crud/entities/delete"/>	
+	<page name="EntitiesTreeList" location="pages/entities/EntitiesTreeList.page" url="crud/tree"/>
+
+	<!-- declaración de los componentes -->
+
+	<!-- forms -->
+
+	<!-- filters -->
+
+	<!-- boxes -->
+
+	<!-- declaración de las actions -->
+	<action name="findEntities" class="Rasty\Crud\actions\ListarEntitiesJson" url="findEntities"/>
+	<action name="findEntity" class="Rasty\Crud\actions\GetEntityJson" url="findEntity"/>
+		
+</rasty-application>

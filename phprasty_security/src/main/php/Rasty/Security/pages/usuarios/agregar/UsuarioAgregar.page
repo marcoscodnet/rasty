@@ -1,0 +1,14 @@
+<rasty specificationClass="Rasty\Security\pages\usuarios\agregar\UsuarioAgregar" templateLocation="pages/usuarios/agregar/UsuarioAgregar.htm"> 
+
+	<param name="layoutType" value="str:RastySecurityLayout" />
+
+	<component id="usuarioForm" type="UsuarioForm">
+		<param name="legend" value="msg:usuario.agregar.legend" />
+		<param name="backToOnSuccess" value="get:backTo" />
+		<param name="backToOnCancel" value="get:backTo" />
+		<param name="action" value="linkActionAgregarUsuario" />
+		<param name="method" value="str:post" />
+		<param name="usuario" value="usuario" />
+	</component>
+	
+</rasty>

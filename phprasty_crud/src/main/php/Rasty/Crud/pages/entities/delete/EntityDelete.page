@@ -1,0 +1,11 @@
+<rasty specificationClass="Rasty\Cryd\pages\entities\delete\EntityDelete" templateLocation="pages/entities/delete/EntityDelete.htm"> 
+
+	<param name="entityOid" value="get:oid" />
+
+	<component id="oid" type="InputHidden">
+		<param name="inputId" value="str:oid" />
+		<param name="name" value="str:oid" />
+		<param name="value" value="entity.oid" />
+	</component>
+
+</rasty>

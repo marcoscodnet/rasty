@@ -1,0 +1,16 @@
+<rasty specificationClass="Rasty\Security\pages\usuarios\modificar\UsuarioModificar" templateLocation="pages/usuarios/modificar/UsuarioModificar.htm"> 
+
+	<param name="layoutType" value="str:RastySecurityLayout" />
+	<param name="usuarioOid" value="get:oid" />
+
+
+	<component id="usuarioForm" type="UsuarioForm">
+		<param name="legend" value="msg:usuario.modificar.legend" />
+		<param name="action" value="linkActionModificarUsuario" />
+		<param name="method" value="str:post" />
+		<param name="backToOnSuccess" value="get:backTo" />
+		<param name="backToOnCancel" value="get:backTo" />
+		<param name="usuario" value="usuario" />
+	</component>
+	
+</rasty>

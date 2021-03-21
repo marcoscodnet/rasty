@@ -1,0 +1,42 @@
+<!-- BEGIN: main-->
+<script>
+</script>
+<style>
+</style>
+
+<div class="grid" >
+
+    <div id="{filterDivId}" class="grid_filters">
+        
+        <rasty id="popupFilter" />
+        
+    </div>
+    <!-- BEGIN: opciones -->
+    <div class="grid_filters_actions">
+	<fieldset>
+		<legend>{legend_opciones}</legend>
+		<!-- BEGIN: add -->
+		<button class="shortcut"
+			onclick="javascript: {onClickAdd}(); return false;">
+			<i class="icon-plus"></i>{label_add}
+		</button>
+		<!-- END: add -->
+		<button class="shortcut"
+			onclick="javascript: closeFinderPopup('#{popupDivId}'); return false;">
+			<i class="icon-exit"></i>{label_close}
+		</button>
+	</fieldset>
+	</div>
+	<!-- END: opciones -->
+	
+	<br class="clear">
+
+	<fieldset>
+        
+       	<legend>{legend_resultados}</legend>
+    		
+    	<div id="{searchDivId}" class="grid_searchdiv">
+		</div>
+    </fieldset>
+</div>
+<!-- END: main-->

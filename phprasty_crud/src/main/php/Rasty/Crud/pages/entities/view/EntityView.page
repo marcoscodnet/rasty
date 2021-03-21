@@ -1,0 +1,5 @@
+<rasty specificationClass="Rasty\Cryd\pages\entities\view\EntityView" templateLocation="pages/entities/view/EntityView.htm"> 
+
+	<param name="entityOid" value="get:oid" />
+
+</rasty>

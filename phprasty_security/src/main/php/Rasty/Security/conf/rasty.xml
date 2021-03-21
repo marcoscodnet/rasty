@@ -1,0 +1,55 @@
+<rasty-application>
+
+	<!-- declaración de las páginas -->
+	<page name="Usuarios"   location="pages/usuarios/Usuarios.page" url="admin/usuarios"/>
+	<page name="UsuarioAgregar"   location="pages/usuarios/agregar/UsuarioAgregar.page" url="admin/usuarios/agregar"/>
+	<page name="UsuarioModificar"   location="pages/usuarios/modificar/UsuarioModificar.page" url="admin/usuarios/modificar"/>
+	<page name="UsuarioEliminar"   location="pages/usuarios/eliminar/UsuarioEliminar.page" url="admin/usuarios/eliminar"/>
+	<page name="ClaveModificar"   location="pages/usuarios/modificar/ClaveModificar.page" url="admin/usuarios/clave/modificar"/>
+	<page name="RolAsignar"   location="pages/usuarios/roles/RolAsignar.page" url="admin/roles/asignar"/>
+	<page name="RolConsultar"   location="pages/usuarios/roles/RolConsultar.page" url="admin/roles/consultar"/>
+
+	<page name="Roles"   location="pages/roles/Roles.page" url="admin/roles"/>
+	<page name="RolAgregar"   location="pages/roles/agregar/RolAgregar.page" url="admin/roles/agregar"/>
+	<page name="RolModificar"   location="pages/roles/modificar/RolModificar.page" url="admin/roles/modificar"/>
+	<page name="PermisoAsignar"   location="pages/roles/permisos/PermisoAsignar.page" url="admin/permisos/asignar"/>
+	<page name="PermisoConsultar"   location="pages/roles/permisos/PermisoConsultar.page" url="admin/permisos/consultar"/>
+
+	<page name="Permisos"   location="pages/permisos/Permisos.page" url="admin/permisos"/>
+	<page name="PermisoAgregar"   location="pages/permisos/agregar/PermisoAgregar.page" url="admin/permisos/agregar"/>
+	<page name="PermisoModificar"   location="pages/permisos/modificar/PermisoModificar.page" url="admin/permisos/modificar"/>
+
+	<!-- declaración de los componentes -->
+
+	<!-- forms -->
+	<component name="UsuarioForm"   location="components/form/usuario"/>
+	<component name="UsuarioRolesForm"   location="components/form/usuario"/>
+	<component name="CambiarClaveForm"   location="components/form/usuario"/>
+	<component name="NuevaClaveConfirmarForm"   location="components/form/usuario"/>
+	<component name="RolForm"   location="components/form/rol"/>
+	<component name="RolPermisosForm"   location="components/form/rol"/>
+	<component name="PermisoForm"   location="components/form/permiso"/>
+
+	<!-- filters -->
+	<component name="UsuarioFilter"   location="components/filter/usuario"/>
+	<component name="RolFilter"   location="components/filter/rol"/>
+	<component name="PermisoFilter"   location="components/filter/permiso"/>
+
+	<!-- boxes -->
+	<component name="UsuarioBox"   location="components/boxes/usuario"/>
+
+	<!-- declaración de las actions -->
+	<action name="AgregarUsuario" class="Rasty\Security\actions\usuarios\AgregarUsuario" url="admin/usuarios/agregar"/>
+	<action name="ModificarUsuario" class="Rasty\Security\actions\usuarios\ModificarUsuario" url="admin/usuarios/modificar"/>
+	<action name="EliminarUsuario" class="Rasty\Security\actions\usuarios\EliminarUsuario" url="admin/usuarios/eliminar"/>
+	<action name="ModificarClave" class="Rasty\Security\actions\usuarios\ModificarClave" url="admin/usuarios/clave/modificar"/>
+	<action name="AsignarRolesUsuario" class="Rasty\Security\actions\usuarios\AsignarRolesUsuario" url="admin/usuarios/roles/asignar"/>
+
+	<action name="AgregarRol" class="Rasty\Security\actions\roles\AgregarRol" url="admin/roles/agregar"/>
+	<action name="ModificarRol" class="Rasty\Security\actions\roles\ModificarRol" url="admin/roles/modificar"/>
+	<action name="AsignarPermisosRol" class="Rasty\Security\actions\roles\AsignarPermisosRol" url="admin/roles/permisos/asignar"/>
+
+	<action name="AgregarPermiso" class="Rasty\Security\actions\permisos\AgregarPermiso" url="admin/permisos/agregar"/>
+	<action name="ModificarPermiso" class="Rasty\Security\actions\permisos\ModificarPermiso" url="admin/permisos/modificar"/>
+
+</rasty-application>

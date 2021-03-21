@@ -1,0 +1,116 @@
+<rasty specificationClass="Rasty\Workflow\components\form\tarea\TareaForm" templateLocation="TareaForm.htm">
+
+	<param name="error" value="get:error" />
+
+	<component id="backSuccess" type="InputHidden">
+		<param name="inputId" value="str:backToOnSuccess" />
+		<param name="name" value="str:backToOnSuccess" />
+		<param name="value" value="backToOnSuccess" />
+	</component>
+
+	<component id="oid" type="InputHidden">
+		<param name="inputId" value="str:oid" />
+		<param name="name" value="str:oid" />
+		<param name="value" value="tarea.oid" />
+	</component>
+
+	<component id="nombre" type="InputText">
+		<param name="inputId" value="str:nombre" />
+		<param name="name" value="str:nombre" />
+		<param name="value" value="tarea.nombre" />
+		<param name="placeholder" value="msg:tarea.nombre" />
+		<param name="styleCss" value="str:uppercase" />
+	</component>
+		
+	<component id="fecha" type="InputDate">
+		<param name="inputId" value="str:fecha" />
+		<param name="name" value="str:fecha" />
+		<param name="value" value="tarea.fecha" />
+		<param name="placeholder" value="msg:tarea.fecha" />
+		<param name="format" value="str:d/m/Y" />
+		<param name="numberOfMonths" value="str:1" />
+		<param name="requiredMessage" value="msg:tarea.fecha.requerida" />
+	</component>
+	
+	<component id="fechaVencimiento" type="InputDate">
+		<param name="inputId" value="str:fechaVencimiento" />
+		<param name="name" value="str:fechaVencimiento" />
+		<param name="value" value="tarea.fechaVencimiento" />
+		<param name="placeholder" value="msg:tarea.fechaVencimiento" />
+		<param name="format" value="str:d/m/Y" />
+		<param name="numberOfMonths" value="str:1" />
+	</component>
+	
+	<component id="responsable" type="InputCombo">
+		<param name="inputId" value="str:responsable" />
+		<param name="name" value="str:responsable" />
+		<param name="value" value="tarea.responsable" />
+		<param name="options" value="usuarios" />
+		<param name="finder" value="usuarioFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:combo.empty" />
+	</component>
+	
+	<component id="supervisor" type="InputCombo">
+		<param name="inputId" value="str:supervisor" />
+		<param name="name" value="str:supervisor" />
+		<param name="value" value="tarea.supervisor" />
+		<param name="options" value="usuarios" />
+		<param name="finder" value="usuarioFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:combo.empty" />
+	</component>
+	
+	<component id="rol" type="InputCombo">
+		<param name="inputId" value="str:rol" />
+		<param name="name" value="str:rol" />
+		<param name="value" value="tarea.rol" />
+		<param name="options" value="roles" />
+		<param name="finder" value="rolFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:combo.empty" />
+	</component>
+	
+	<component id="categoria" type="InputComboTree">
+		<param name="inputId" value="str:categoria" />
+		<param name="name" value="str:categoria" />
+		<param name="value" value="tarea.categoria" />
+		<param name="model" value="categoriasModel" />
+		<param name="emptyOptionLabel" value="msg:combo.empty" />
+		<param name="requiredMessage" value="msg:tarea.categoria.requerida" />
+	</component>
+	
+	<component id="estado" type="InputCombo">
+		<param name="inputId" value="str:estado" />
+		<param name="name" value="str:estado" />
+		<param name="value" value="tarea.estado" />
+		<param name="options" value="estados" />
+		<param name="emptyOptionLabel" value="msg:combo.empty" />
+		<param name="requiredMessage" value="msg:tarea.estado.requerida" />
+	</component>
+	
+	<component id="prioridad" type="InputCombo">
+		<param name="inputId" value="str:prioridad" />
+		<param name="name" value="str:prioridad" />
+		<param name="value" value="tarea.prioridad" />
+		<param name="options" value="prioridades" />
+		<param name="emptyOptionLabel" value="msg:combo.empty" />
+		<param name="requiredMessage" value="msg:tarea.prioridad.requerida" />
+	</component>
+	
+	<component id="porcentajeRealizada" type="InputPercentage">
+		<param name="inputId" value="str:porcentajeRealizada" />
+		<param name="name" value="str:porcentajeRealizada" />
+		<param name="value" value="tarea.porcentajeRealizada" />
+		<param name="placeholder" value="msg:tarea.porcentajeRealizada" />
+		<param name="rangeMin" value="str:0" />
+		<param name="rangeMax" value="str:101" />
+		<param name="rangeMaxMsg" value="msg:numero.rango.maximo" />
+		<param name="rangeMinMsg" value="msg:numero.rango.minimo" />
+	</component>
+	
+	<component id="padre" type="InputFindEntity">
+		<param name="inputId" value="str:padre" />
+		<param name="name" value="str:padre" />
+		<param name="value" value="tarea.padre" />
+		<param name="placeholder" value="msg:tarea.padre" />
+		<param name="finder" value="tareaFinderClazz" />
+	</component>
+</rasty>

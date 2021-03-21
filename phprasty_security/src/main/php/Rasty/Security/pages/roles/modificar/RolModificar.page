@@ -1,0 +1,16 @@
+<rasty specificationClass="Rasty\Security\pages\roles\modificar\RolModificar" templateLocation="pages/roles/modificar/RolModificar.htm"> 
+
+	<param name="layoutType" value="str:RastySecurityLayout" />
+	<param name="rolOid" value="get:oid" />
+
+
+	<component id="rolForm" type="RolForm">
+		<param name="legend" value="msg:rol.modificar.legend" />
+		<param name="action" value="linkActionModificarRol" />
+		<param name="method" value="str:post" />
+		<param name="backToOnSuccess" value="get:backTo" />
+		<param name="backToOnCancel" value="get:backTo" />
+		<param name="rol" value="rol" />
+	</component>
+	
+</rasty>

@@ -1,0 +1,43 @@
+<rasty-application>
+
+	<!-- declaración de las páginas -->
+	<page name="Tareas" extend="EntitiesList" class="Rasty\Workflow\pages\tareas\Tareas" url="tareas"/>
+	<page name="TareaAdd" extend="EntityAdd" class="Rasty\Workflow\pages\tareas\TareaAdd" url="tareas/agregar"/>
+	<page name="TareaView" extend="EntityView" class="Rasty\Workflow\pages\tareas\TareaView" url="tareas/consultar"/>
+	<page name="TareaUpdate" extend="EntityUpdate" class="Rasty\Workflow\pages\tareas\TareaUpdate" url="tareas/modificar"/>
+	<page name="TareaDelete" extend="EntityDelete" class="Rasty\Workflow\pages\tareas\TareaDelete" url="tareas/eliminar"/>
+	
+			
+	<!-- page name="CategoriasTarea" extend="EntitiesList" class="Rasty\Workflow\pages\categoriasTarea\CategoriasTarea" url="categoriasTarea"/-->
+	<page name="CategoriaTareaAdd" extend="EntityAdd" class="Rasty\Workflow\pages\categoriasTarea\CategoriaTareaAdd" url="categoriasTarea/agregar"/>
+	<page name="CategoriaTareaView" extend="EntityView" class="Rasty\Workflow\pages\categoriasTarea\CategoriaTareaView" url="categoriasTarea/consultar"/>
+	<page name="CategoriaTareaUpdate" extend="EntityUpdate" class="Rasty\Workflow\pages\categoriasTarea\CategoriaTareaUpdate" url="categoriasTarea/modificar"/>
+	<page name="CategoriaTareaDelete" extend="EntityDelete" class="Rasty\Workflow\pages\categoriasTarea\CategoriaTareaDelete" url="categoriasTarea/eliminar"/>
+	<page name="CategoriasTareaTree" extend="EntitiesTreeList" class="Rasty\Workflow\pages\categoriasTarea\CategoriasTareaTree" url="categoriasTarea" />
+
+	<!-- declaración de los componentes -->
+	
+	<!-- forms -->
+	<component name="TareaForm" location="components/form/tarea" />
+	<component name="CategoriaTareaForm" location="components/form/categoriaTarea" />
+	
+	<!-- filters -->
+	<component name="TareaFilter" location="components/filter/tarea" />
+	<component name="CategoriaTareaFilter" extend="CatalogoFilter" class="Rasty\Workflow\components\filter\catalogo\CategoriaTareaFilter" />
+	
+	<!-- boxes -->
+	<component name="TareaBox" location="components/boxes/tarea" />
+	<component name="CategoriaTareaBox" location="components/boxes/categoriaTarea" />
+
+	<!-- inputs -->
+
+	<!-- declaración de las actions -->
+	<action name="AgregarTarea" class="Rasty\Workflow\actions\tareas\AgregarTarea" url="tarea/agregar"/>
+	<action name="ModificarTarea" class="Rasty\Workflow\actions\tareas\ModificarTarea" url="tarea/modificar"/>
+	<action name="BorrarTarea" class="Rasty\Workflow\actions\tareas\BorrarTarea" url="tarea/eliminar"/>
+
+	<action name="AgregarCategoriaTarea" class="Rasty\Workflow\actions\categoriasTarea\AgregarCategoriaTarea" url="categoriaTarea/agregar"/>
+	<action name="ModificarCategoriaTarea" class="Rasty\Workflow\actions\categoriasTarea\ModificarCategoriaTarea" url="categoriaTarea/modificar"/>
+	<action name="BorrarCategoriaTarea" class="Rasty\Workflow\actions\categoriasTarea\BorrarCategoriaTarea" url="categoriaTarea/eliminar"/>
+	
+</rasty-application>

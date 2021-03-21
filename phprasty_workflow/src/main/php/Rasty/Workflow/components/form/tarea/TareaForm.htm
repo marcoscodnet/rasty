@@ -1,0 +1,126 @@
+<!-- BEGIN:main -->
+<script language="javascript"
+	src="{WEB_PATH}js/autocomplete/simpleAutoComplete.js"></script>
+<link rel="stylesheet"
+	href="{WEB_PATH}css/autocomplete/simpleAutoComplete.css"
+	type="text/css" />
+
+<script>
+
+function tipotareachange(){
+	console.log("tipo tarea change");
+}
+
+</script>
+<div>
+<form class="rasty_form" id="tarea_form" onsubmit="return validate('tarea_form');" action="{action}" method="{method}">
+
+	<fieldset>
+
+		<legend>{legend}</legend>
+
+		<rasty id="oid" />
+		<rasty id="backSuccess" />
+
+		<div class="row">
+			<div class="col-6">
+				<div class="col-12">
+					<div class="item">
+					    <label for="nombre">{lbl_nombre}:</label>
+					    <rasty id="nombre" />
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="item">
+				    <label for="fecha">{lbl_fecha}:</label>
+				    <rasty id="fecha" />
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="item">
+				    <label for="fechaVencimiento">{lbl_fechaVencimiento}:</label>
+				    <rasty id="fechaVencimiento" />
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="item">
+					    <label for="padre">{lbl_padre}:</label>
+					    <rasty id="padre" />
+					</div>
+				</div>
+
+			</div>
+			<div class="col-6">
+				<div class="item">
+				    <label for="categoria">{lbl_categoria}:</label>
+				    <rasty id="categoria" />
+				</div>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+		<div class="row">
+			<div class="col-4">
+				<div class="item">
+				    <label for="rol">{lbl_rol}:</label>
+				    <rasty id="rol" />
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="item">
+				    <label for="responsable">{lbl_responsable}:</label>
+				    <rasty id="responsable" />
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="item">
+				    <label for="supervisor">{lbl_supervisor}:</label>
+				    <rasty id="supervisor" />
+				</div>
+			</div>
+			<div style="clear: both;"></div>
+		</div>		
+		<div class="row">
+			<div class="col-4">
+				<div class="item">
+				    <label for="estado">{lbl_estado}:</label>
+				    <rasty id="estado" />
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="item">
+				    <label for="prioridad">{lbl_prioridad}:</label>
+				    <rasty id="prioridad" />
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="item">
+				    <label for="porcentajeRealizada">{lbl_porcentajeRealizada}:</label>
+				    <rasty id="porcentajeRealizada" />
+				</div>
+			</div>
+			<div style="clear: both;"></div>
+		</div>		
+
+		
+	</fieldset>
+
+	<!-- BEGIN: msg_error -->
+	<fieldset class="ui-state-error">
+			{msg}	
+	</fieldset>
+	<!-- END: msg_error -->
+	
+</form>
+<form  class="rasty_form" id="buttons{inputId}">
+	<fieldset class="tblFooters">
+	
+		<button type="button"  id="input_submit" onclick="javascript: submitFormulario('tarea_form'); "><i class="icon-checkmark on-left"></i>{lbl_submit}</button>
+
+		<button type="button"  id="input_button_2" onclick="javascript: window.location.href = '{cancel}'; "><i class="icon-cancel-2 on-left"></i>{lbl_cancel}</button>
+	
+	</fieldset>
+</form>	
+
+
+</div>
+<!-- END:main -->

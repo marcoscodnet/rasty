@@ -1,0 +1,44 @@
+<!-- BEGIN: main -->
+<ul class="autocomplete-ul">
+	<!-- BEGIN: item2 -->
+	<li class="{li_style}" id="autocomplete_{code}" label="{label}" rel="{rel}">
+		{p}
+		<div id='autocomplete_item_desc'>
+			<table>
+				<tr>
+					<!-- BEGIN: detail -->
+					<td>{detail_value}</td>
+					<!-- END: detail -->
+				</tr>
+			</table>
+		</div>
+	</li>
+	<!-- END: item2 -->
+	
+	<!-- BEGIN: item -->
+	<li class="autocomplete-li {li_style}" id="autocomplete_{code}" label="{label}" rel="{rel}">
+			<span class="autocomplete-li-item">
+			{p}
+			</span>
+			<span class="autocomplete-li-item-details">
+				<!-- BEGIN: detail -->
+				{detail_value}	<br />
+				<!-- END: detail -->
+			</span>
+	
+	</li>
+	<!-- END: item -->
+	<!-- BEGIN: add_item -->
+	<li class="autocomplete-li {li_style}" id="autocomplete_{code}" label="{label}" rel="{rel}" onclick="{onclick_add};return false;">
+			<span class="autocomplete-li-item">
+			{empty_result}
+			</span>
+			<span class="autocomplete-li-item-details">
+				{msg_add}
+			</span>
+	</li>
+	<!-- END: add_item -->
+</ul>
+
+{error}
+<!-- END: main -->

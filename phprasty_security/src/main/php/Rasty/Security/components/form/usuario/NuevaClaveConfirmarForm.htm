@@ -1,0 +1,143 @@
+<!-- BEGIN:main -->
+<script language="javascript"
+	src="{WEB_PATH}/js/jquery/popper.min.js"></script>
+<script language="javascript"
+	src="{WEB_PATH}/js/jquery/bootstrap.min.js"></script>
+
+<style>
+<!--
+.ok {
+	color: #3c763d;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+}
+.alert {
+	color: #8a6d3b;
+	background-color: #fcf8e3;
+	border-color: #faebcc;
+}
+.error {
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+}
+-->
+</style>
+<script>
+
+
+$(function() {
+
+	$("#newPassword").keyup( function(){
+		var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+	     var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+	     var enoughRegex = new RegExp("(?=.{6,}).*", "g");
+	     if (false == enoughRegex.test($(this).val())) {
+	    	 	$("#passstrength").removeClass("ok");
+	    	 	$("#passstrength").removeClass("alert");
+	    	 	$('#passstrength').addClass("error");
+	    	 	
+	             $('#passstrength').html('M&aacute;s caracteres.');
+	     } else if (strongRegex.test($(this).val())) {
+	    	 $("#passstrength").removeClass("error");
+	    	 	$("#passstrength").removeClass("alert");
+	    	 	$('#passstrength').addClass("ok");
+	             $('#passstrength').html('Fuerte!');
+	     } else if (mediumRegex.test($(this).val())) {
+	    	 $("#passstrength").removeClass("ok");
+	    	 	$("#passstrength").removeClass("error");
+	    	 $('#passstrength').addClass("alert");
+	             $('#passstrength').html('Media!');
+	     } else {
+	    	 	$("#passstrength").removeClass("ok");
+	    	 	$("#passstrength").removeClass("alert");	
+	             $('#passstrength').addClass("error");
+	             $('#passstrength').html('D&eacute;bil!');
+	     }
+	     return true;
+	});
+}); 
+</script>
+<script>
+
+$(function() {
+
+	$("#captcha").focus();
+	
+});
+
+</script>
+
+<div>
+
+<!-- BEGIN:ok -->
+<form class="rasty_form" id="registracionConfirmar_form" onsubmit="return validate('registracionConfirmar_form');" action="{action}" method="{method}">
+
+	<rasty id="backSuccess" />
+    <rasty id="oid" />
+    <rasty id="validationCode" />
+
+	<p>Hola {nombre}!</p>
+	<p>Completa el siguiente formulario para obtener tu nueva clave.</p>
+		
+	<fieldset>
+	
+		<legend>{nuevaClaveConfirmar_legend}</legend>
+
+		<div class="item">
+		    <label for="password">{lbl_password} *:</label>
+		    <rasty id="password" />
+		    <br />{claveFormato}
+		</div>
+		<span id="passstrength"></span>
+		<div class="item">
+		    <label for="passwordRepeat">{lbl_passwordRepeat} *:</label>
+		    <rasty id="passwordRepeat" />
+		</div>
+
+		
+		<div class="item">
+		    <label for="siimage">{lbl_securitycode}:</label>
+		    <span class="input">
+		    	<img id="siimage" align="left" style="padding-right: 5px; border: 0" src="{WEB_PATH}/libs/securimage/securimage_show.php?sid={sid_captcha}" />
+                    
+                <a tabindex="-1" style="border-style: none" href="#" title="{change_image}" onClick="document.getElementById('siimage').src = '{WEB_PATH}/libs/securimage/securimage_show.php?sid=' + Math.random(); return false">
+                <img src="{WEB_PATH}/libs/securimage/images/refresh.png" title="{change_image}" alt="{change_image}" border="0" onClick="this.blur()" align="bottom" />
+                </a>
+		    </span>
+		    
+		</div>
+		
+		<div style="clear: both;"></div>
+		
+
+		<div class="item">
+		    <label for="captcha">{lbl_captcha} *:</label>
+		    <rasty id="captcha" />
+		</div>
+
+	</fieldset>
+</form>
+<!-- END:ok -->
+
+<!-- BEGIN: msg_error -->
+<fieldset class="ui-state-error">
+	{msg}	
+</fieldset>
+<!-- END: msg_error -->
+
+<!-- BEGIN:nook -->
+<!-- END:nook -->
+
+<!-- BEGIN: submit -->
+<form  class="rasty_form" id="buttons{inputId}">
+	<fieldset class="tblFooters">
+	
+		<button type="button"  id="input_submit" onclick="javascript: submitFormulario('registracionConfirmar_form'); "><i class="icon-checkmark on-left"></i>{lbl_submit}</button>
+
+		<button type="button"  id="input_button_2" onclick="javascript: window.location.href = '{cancel}'; "><i class="icon-cancel-2 on-left"></i>{lbl_cancel}</button>
+	
+	</fieldset>
+</form><!-- END: submit -->	
+</div>
+<!-- END:main -->

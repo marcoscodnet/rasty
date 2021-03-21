@@ -1,0 +1,7 @@
+<rasty specificationClass="Rasty\Security\pages\usuarios\recuperarClave\NuevaClaveSolicitar" templateLocation="pages/usuarios/recuperarClave/NuevaClaveSolicitar.htm"> 
+
+	<param name="layoutType" value="str:RastySecurityPublicLayout" />
+	<param name="error" value="get:error" />
+
+		
+</rasty>

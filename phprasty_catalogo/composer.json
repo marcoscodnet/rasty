@@ -1,0 +1,14 @@
+{
+    "name": "codnet/phprasty-catalogo",
+    "type": "library","version":"1.0.0",
+    "description": "Security components for phprasty",
+    "keywords": ["php", "framework", "components", "catalogo", "codnet"],
+    "homepage": "http://www.codnet.com.ar",
+    "license": "GPL v2",
+    "authors": [
+        {"name": "Bernardo Iribarne", "email": "ber.iribarne@gmail.com"}
+    ],
+    "autoload": {
+        "psr-0": { "Rasty\\Catalogo": "src/main/php" }
+    }
+}

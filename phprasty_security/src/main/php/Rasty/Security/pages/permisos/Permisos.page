@@ -1,0 +1,13 @@
+<rasty specificationClass="Rasty\Security\pages\permisos\Permisos" templateLocation="pages/permisos/Permisos.htm"> 
+
+	<param name="layoutType" value="str:RastySecurityLayout" />
+
+	<component id="permisosFilter" type="PermisoFilter">
+		<param name="gridModelClazz" value="modelClazz" />
+		<param name="uicriteriaClazz" value="uicriteriaClazz" />
+		<param name="legend" value="msg:permiso.buscar" />
+		<param name="legendAgain" value="msg:permiso.buscar.again" />
+		<param name="resultDiv" value="str:searchdiv" />
+	</component>
+	
+</rasty>
